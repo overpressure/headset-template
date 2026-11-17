@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/overpressure/myheadset/security/advisories/new
+    about: Report it privately, not in a public issue.
+  - name: Documentation
+    url: https://github.com/overpressure/myheadset#readme
+    about: How to install, upgrade and go back to stock.
+  - name: The installer and the tools on the computer
+    url: https://github.com/overpressure/overpressure/issues/new/choose
+    about: A problem of the installer window or the command line that is not My Headset's.
