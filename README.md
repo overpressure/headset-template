@@ -1,5 +1,9 @@
 # My Headset
 
+[![Newest release](https://img.shields.io/github/v/release/overpressure/myheadset?include_prereleases&label=release&color=2a66ec)](https://github.com/overpressure/myheadset/releases)
+[![CI on main](https://github.com/overpressure/myheadset/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/overpressure/myheadset/actions/workflows/ci.yml?query=branch%3Amain)
+[![Chat: the My Headset room on Matrix](https://img.shields.io/badge/chat-My%20Headset%20room-2a66ec?logo=matrix&logoColor=white)](https://matrix.to/#/#overpressure-myheadset:matrix.org)
+
 **Linux and Valve's SteamVR on My Headset, installed with
 [overpressure](https://github.com/overpressure/overpressure).** It replaces the headset's stock system with a
 system built on Valve's Steam Frame software: SteamVR, the Steam client and its games run on the headset itself,
@@ -115,6 +119,9 @@ The window says what state the headset is in and what to do next; starting it ag
 report a problem, click **Save logs…** on My Headset's page in the window and attach the file to
 [an issue](https://github.com/overpressure/myheadset/issues/new/choose); it leaves out your headset's serial
 numbers.
+
+Questions and quick help: the [My Headset room](https://matrix.to/#/#overpressure-myheadset:matrix.org) and the
+[Help room](https://matrix.to/#/#overpressure-help:matrix.org) of the project's Matrix space.
 
 ## For developers
 
