@@ -7,7 +7,8 @@
 CODENAME is the vendor's internal name for the headset, a lowercase Python identifier (the repository is
 overpressure/CODENAME, cloned into devices/CODENAME). It replaces the template's myheadset, MyHeadset,
 MYHEADSET_, "My Headset" and "My SoC" in every file of the repository, then removes TEMPLATE.md and itself. Run
-it once, right after creating the repository from the template; then commit.
+it once, right after creating the repository from the template; then commit. In URLs (the README's chat badge)
+"My%20Headset" becomes the name with its spaces and other characters escaped.
 """
 
 from __future__ import annotations
@@ -15,6 +16,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -25,6 +27,7 @@ def replacements(codename: str, name: str, soc: str) -> list[tuple[str, str]]:
     """Return the template's words and what they become, the longest first."""
     camel = "".join(part.capitalize() for part in codename.split("_"))
     return [
+        ("My%20Headset", urllib.parse.quote(name, safe="")),
         ("MYHEADSET_", codename.upper() + "_"),
         ("MyHeadset", camel),
         ("My Headset", name),
