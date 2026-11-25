@@ -16,7 +16,7 @@ the script go with the first commit.
 | `tests/` | host tests of the above |
 | `README.md` | the owners' page, in the [headset README template](https://github.com/overpressure/overpressure/blob/main/docs/headset-readme-template.md)'s form, every row ❔ |
 | `CLAUDE.md`, `docs/` | the developers' guidance and documents, releasing included |
-| `.github/` | CI against overpressure's `main` (tests on Windows, Linux and macOS, ruff, ty, the docs and README check, the private-data scan, shellcheck, actionlint), the release on a tag, issue forms, the pull request template, CODEOWNERS |
+| `.github/` | CI against overpressure's `main` through its shared [headset-ci.yml](https://github.com/overpressure/overpressure/blob/main/.github/workflows/headset-ci.yml) (tests on Windows, Linux and macOS, ruff, ty, the docs and README check, the private-data scan, shellcheck, actionlint), the release on a tag through its [headset-release.yml](https://github.com/overpressure/overpressure/blob/main/.github/workflows/headset-release.yml), issue forms, the pull request template, CODEOWNERS |
 | `.gitattributes`, `.editorconfig`, `.gitignore`, `cliff.toml`, `LICENSE` | line endings and `headset.json`'s `export-subst`, the changelog's setup, the Unlicense |
 
 ## Steps
