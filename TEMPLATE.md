@@ -9,7 +9,7 @@ the script go with the first commit.
 
 | File | What it is |
 | --- | --- |
-| `headset.json` | codename, name, version (`2026.11.0.dev0`, a calendar version: [docs/releasing.md](docs/releasing.md)), the headset interface it is made for (`1.5`) |
+| `headset.json` | codename, name, version (`2026.11.0.dev0`, a calendar version: [docs/releasing.md](docs/releasing.md)), the headset interface it is made for (`1.8`: its stage 1 and installed system will run on overpressure's [headset runtime](https://github.com/overpressure/overpressure/blob/main/docs/runtime.md)) |
 | `tooling/__init__.py` | `HEADSET`: one command (`dev status`) and two window steps (the host tools, *Status*) |
 | `tooling/localconfig.py`, `env.example` | its `.env` settings: overpressure's `DeviceSettings` with its own key prefix |
 | `tooling/doctor.py` | its checks for `python -m overpressure doctor`, from the shared ones |
