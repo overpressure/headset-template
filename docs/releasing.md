@@ -1,8 +1,8 @@
 # Releasing
 
 **TL;DR.** A pushed, annotated tag that is `headset.json`'s calendar version (`2026.12.0`, a beta `2026.12.0b0`)
-makes the release overpressure downloads (`python -m overpressure headset add myheadset`, the window's
-*Download*): the source zip and its SHA-256, nothing uploaded by hand. Only the headset's team creates its tags
+makes the release overpressure downloads (`overpressure headset add myheadset`, the app's
+*+*): the source zip and its SHA-256, nothing uploaded by hand. Only the headset's team creates its tags
 ([GOVERNANCE.md](https://github.com/overpressure/.github/blob/main/GOVERNANCE.md)).
 
 ## Versions
@@ -44,7 +44,7 @@ overpressure that runs it installs the release, also later ones, and the release
 5. **The next version.** `python .overpressure/scripts/release.py bump next --version-file headset.json` writes
    the next development version, by pull request.
 6. **The catalogue.** For its first release, the headset gets its entry in overpressure's
-   `overpressure/catalogue.py`, by pull request there: then the window offers it.
+   `overpressure/catalogue.py`, by pull request there: then the app offers it.
 
 A failed check stops the release before anything is published. Fix it on `main`, delete the tag (`git push
 origin :refs/tags/2026.12.0b0`) and tag the fixed commit. A published version never moves.

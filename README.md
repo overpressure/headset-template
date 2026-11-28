@@ -103,20 +103,20 @@ Everything that is still open: [the issues](https://github.com/overpressure/myhe
 
 There is no release to install yet. Once there is:
 
-1. Download [overpressure](https://github.com/overpressure/overpressure/releases) and unpack it.
-2. Start it: double-click `Install.cmd` on Windows or `Install.command` on macOS, or run `sh install.sh` on Linux.
-3. Accept the disclaimer, choose My Headset and click **Download**.
-4. Click **Install** and follow the window. It checks your computer and the headset, backs the headset up, then
+1. Download [the overpressure app](https://github.com/overpressure/overpressure#quick-start) for your computer
+   and start it.
+2. Accept the disclaimer, add My Headset with **+** and open it.
+3. Click **Install** and follow the app. It checks your computer and the headset, backs the headset up, then
    installs.
-5. When the window says so, unplug the headset and put it on.
+4. When the app says so, unplug the headset and put it on.
 
 **Upgrade** installs a newer release and keeps your data. **Restore to stock** brings the stock system back from
 the backup.
 
 ## If something goes wrong
 
-The window says what state the headset is in and what to do next; starting it again goes on where it stopped. To
-report a problem, click **Save logs…** on My Headset's page in the window and attach the file to
+The app says what state the headset is in and what to do next; starting it again goes on where it stopped. To
+report a problem, click **Save logs** on My Headset's page in the app and attach the file to
 [an issue](https://github.com/overpressure/myheadset/issues/new/choose); it leaves out your headset's serial
 numbers.
 

@@ -8,12 +8,12 @@ its images, its installer (install_plan, workflows), its backup (backup_set) and
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING
 
 from overpressure.api.v1.headset import Command, Headset, Info, Step, tools_step
 
 if TYPE_CHECKING:
-    from collections.abc import Sequence
+    from collections.abc import Callable, Sequence
 
     from overpressure.api.v1.doctor import Check, Host
 

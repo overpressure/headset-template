@@ -3,13 +3,15 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING
 
 from overpressure.api.v1 import doctor
 
 from . import localconfig
 
 if TYPE_CHECKING:
+    from collections.abc import Callable
+
     from overpressure.api.v1.doctor import Check, Host
 
 NEEDED_FOR = "My Headset's commands"

@@ -42,11 +42,11 @@ overpressure are GitHub URLs. Releasing: [docs/releasing.md](docs/releasing.md).
 From the overpressure checkout's root:
 
 ```sh
-python -m unittest discover -t . -s devices/myheadset/tests   # host tests, seconds, no hardware
+uv run python -m unittest discover -t . -s devices/myheadset/tests   # host tests, seconds, no hardware
 uv run ruff format --check devices/myheadset && uv run ruff check devices/myheadset && uv run ty check devices/myheadset
-python -m overpressure devices                                # it loads, or why not
-python -m overpressure --device myheadset steps               # its steps and their command lines
-python -m overpressure --device myheadset dev status          # what this computer sees of the headset
+uv run python -m overpressure devices                                # it loads, or why not
+uv run python -m overpressure --device myheadset steps               # its steps and their command lines
+uv run python -m overpressure --device myheadset dev status          # what this computer sees of the headset
 ```
 
 ## Hard rules
