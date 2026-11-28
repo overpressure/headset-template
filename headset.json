@@ -2,7 +2,7 @@
  "codename": "myheadset",
  "name": "My Headset",
  "version": "2026.11.0.dev0",
- "api": "1.8",
+ "api": "1.14",
  "commit": "$Format:%H$",
  "date": "$Format:%ct$"
 }

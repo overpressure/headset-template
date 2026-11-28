@@ -11,7 +11,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from unittest import mock
 
-from devices.myheadset.tooling import HEADSET, dev
+from devices.myheadset.tooling import HEADSET, dev, localconfig
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,6 +21,11 @@ class HeadsetTests(unittest.TestCase):
         manifest = json.loads((ROOT / "headset.json").read_text(encoding="utf-8"))
         self.assertEqual(HEADSET.info.codename, manifest["codename"])
         self.assertEqual(HEADSET.info.name, manifest["name"])
+
+    def test_its_private_files_are_in_its_own_folders(self):
+        settings = localconfig.Settings()
+        for place in (settings.identity, settings.backup, settings.loader):
+            self.assertTrue(place.startswith(("backup/myheadset/", "assets/myheadset/")), place)
 
     def test_every_command_and_step_has_its_module(self):
         commands = HEADSET.commands()

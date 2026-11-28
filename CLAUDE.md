@@ -33,8 +33,9 @@ overpressure are GitHub URLs. Releasing: [docs/releasing.md](docs/releasing.md).
   `HEADSET` (its commands, the window's steps, its doctor checks); `localconfig.py` its `.env` settings
   (`MYHEADSET_` keys, `env.example`); `doctor.py` its checks; `dev.py` the development commands.
 - `tests/`: host tests, no hardware. `docs/`: its documents. `.github/`: CI and the release workflow.
-- Private and generated, ignored, at the overpressure checkout's root: `backup/`, `assets/`, `cache/`, `out/`,
-  `.env`.
+- Private and generated, ignored, at the overpressure checkout's root: `backup/myheadset/` (its identity and
+  backups), `assets/myheadset/` (its loader and other private files), `cache/`, `out/`, `.env`. Its own folders
+  under `backup/` and `assets/` let other headsets share the computer (`CODENAME`).
 
 ## Commands
 
