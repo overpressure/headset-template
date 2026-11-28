@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Unlicense
 """Host tests of My Headset's tooling."""
 
-# Tools fetched into this checkout (python -m overpressure tools) must not stand in for the tests'
+# Tools fetched into this checkout (overpressure tools) must not stand in for the tests'
 # fakes: every test sees an empty tools cache.
 import atexit as _atexit
 import shutil as _shutil

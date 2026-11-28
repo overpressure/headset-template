@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Unlicense
 """My Headset's development commands.
 
-    python -m overpressure --device myheadset dev status   what this computer sees of the headset on USB
+    overpressure --device myheadset dev status   what this computer sees of the headset on USB
 
 A starting point: it reads nothing but adb's list. The headset's own commands (images, flashing, a
 development loop) go here or into modules of their own, each named in HEADSET.commands().
@@ -17,7 +17,7 @@ from . import localconfig
 
 
 def status() -> int:
-    """Print adb's devices, with the adb .env names (or the one python -m overpressure tools fetched)."""
+    """Print adb's devices, with the adb .env names (or the one overpressure tools fetched)."""
     adb = localconfig.load().tool("adb")
     try:
         done = subprocess.run([adb, "devices"], capture_output=True, text=True, timeout=30, check=False)  # noqa: S603  # adb, no shell
@@ -30,7 +30,7 @@ def status() -> int:
 
 def main(argv: list[str]) -> int:
     """Run a development command."""
-    parser = argparse.ArgumentParser(prog="python -m overpressure --device myheadset dev")
+    parser = argparse.ArgumentParser(prog="overpressure --device myheadset dev")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("status", help="what this computer sees of the headset on USB")
     args = parser.parse_args(argv)

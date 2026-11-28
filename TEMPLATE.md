@@ -12,7 +12,7 @@ the script go with the first commit.
 | `headset.json` | codename, name, version (`2026.11.0.dev0`, a calendar version: [docs/releasing.md](docs/releasing.md)), the headset interface it is made for (`1.8`: its stage 1 and installed system will run on overpressure's [headset runtime](https://github.com/overpressure/overpressure/blob/main/docs/runtime.md)) |
 | `tooling/__init__.py` | `HEADSET`: one command (`dev status`) and two window steps (the host tools, *Status*) |
 | `tooling/localconfig.py`, `env.example` | its `.env` settings: overpressure's `DeviceSettings` with its own key prefix |
-| `tooling/doctor.py` | its checks for `python -m overpressure doctor`, from the shared ones |
+| `tooling/doctor.py` | its checks for `overpressure doctor`, from the shared ones |
 | `tests/` | host tests of the above |
 | `README.md` | the owners' page, in the [headset README template](https://github.com/overpressure/overpressure/blob/main/docs/headset-readme-template.md)'s form, every row ❔ |
 | `CLAUDE.md`, `docs/` | the developers' guidance and documents, releasing included |
@@ -29,7 +29,7 @@ the script go with the first commit.
    ```sh
    git clone https://github.com/overpressure/<codename> devices/<codename>
    python devices/<codename>/scripts/new-headset.py <codename> "<Name>" "<SoC>"
-   python -m overpressure devices
+   overpressure devices
    python -m unittest discover -t . -s devices/<codename>/tests
    ```
 

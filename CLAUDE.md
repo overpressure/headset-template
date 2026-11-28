@@ -29,7 +29,7 @@ overpressure are GitHub URLs. Releasing: [docs/releasing.md](docs/releasing.md).
 
 - `headset.json`: codename, name, version, the headset interface it was made for (`api`); a release zip carries its
   commit and date.
-- `tooling/`: the host tooling, reached as `python -m overpressure --device myheadset COMMAND`. `__init__.py` holds
+- `tooling/`: the host tooling, reached as `overpressure --device myheadset COMMAND`. `__init__.py` holds
   `HEADSET` (its commands, the window's steps, its doctor checks); `localconfig.py` its `.env` settings
   (`MYHEADSET_` keys, `env.example`); `doctor.py` its checks; `dev.py` the development commands.
 - `tests/`: host tests, no hardware. `docs/`: its documents. `.github/`: CI and the release workflow.
@@ -44,9 +44,9 @@ From the overpressure checkout's root:
 ```sh
 uv run python -m unittest discover -t . -s devices/myheadset/tests   # host tests, seconds, no hardware
 uv run ruff format --check devices/myheadset && uv run ruff check devices/myheadset && uv run ty check devices/myheadset
-uv run python -m overpressure devices                                # it loads, or why not
-uv run python -m overpressure --device myheadset steps               # its steps and their command lines
-uv run python -m overpressure --device myheadset dev status          # what this computer sees of the headset
+uv run overpressure devices                                # it loads, or why not
+uv run overpressure --device myheadset steps               # its steps and their command lines
+uv run overpressure --device myheadset dev status          # what this computer sees of the headset
 ```
 
 ## Hard rules

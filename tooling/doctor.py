@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Unlicense
-"""My Headset's checks for python -m overpressure doctor: .env and the host tools, from overpressure's shared ones."""
+"""My Headset's checks for overpressure doctor: .env and the host tools, from overpressure's shared ones."""
 
 from __future__ import annotations
 

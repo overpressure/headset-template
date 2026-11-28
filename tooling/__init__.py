@@ -24,7 +24,7 @@ class MyHeadset(Headset):
     info = Info("myheadset", "My Headset", "My SoC", "the approach in one line, for Advanced mode's header")
 
     def commands(self) -> dict[str, Command]:
-        """Return the command line: python -m overpressure --device myheadset dev status."""
+        """Return the command line: overpressure --device myheadset dev status."""
         return {"dev": Command("dev", "the development commands: dev status")}
 
     def steps(self) -> Sequence[Step]:
